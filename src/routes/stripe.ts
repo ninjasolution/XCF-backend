@@ -56,7 +56,7 @@ async function create(logger: Logger, provider: ethers.providers.Provider) {
         const { paymentMethod } = req.body;
 
         /* Fetch the Customer Id of current logged in user from the database */
-        const customerId = "cus_Lh8BpVkOo5akHN";
+        const customerId = "cus_Mh9LTBDpKwf1k3";
 
         try {
           const method = await attachMethod({ paymentMethod, customerId });
@@ -75,7 +75,7 @@ async function create(logger: Logger, provider: ethers.providers.Provider) {
 
   router.get("/payment/methods", async (req, res) => {
     /* Query database to fetch Stripe Customer Id of current logged in user */
-    const customerId = "cus_Lh8BpVkOo5akHN";
+    const customerId = "cus_Mh9LTBDpKwf1k3";
   
     try {
       const paymentMethods = await listCustomerPayMethods(customerId);
@@ -93,7 +93,7 @@ async function create(logger: Logger, provider: ethers.providers.Provider) {
   
     const amount = 1000;
     const currency = "INR";
-    const userCustomerId = "cus_Lh8BpVkOo5akHN";
+    const userCustomerId = "cus_Mh9LTBDpKwf1k3";
   
     try {
       const paymentIntent = await stripe.paymentIntents.create({

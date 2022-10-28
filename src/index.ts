@@ -13,6 +13,7 @@ type CliArgs = {
 };
 
 function defaultPort(protocol: string) {
+  console.log(protocol)
   switch (protocol) {
     case "http:":
       return 80;
